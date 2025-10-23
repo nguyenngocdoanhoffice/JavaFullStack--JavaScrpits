@@ -1,0 +1,25 @@
+
+.custom-form-box {
+  border: 1px solid #f3f3f3;
+}
+
+.custom-input:focus {
+  border-color: #dc2626; /* đỏ nhạt hơn */
+  box-shadow: 0 0 5px rgba(220, 38, 38, 0.3);
+}
+
+.custom-btn {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.custom-info-box {
+  border-left: 4px solid #ef4444;
+}
+
+@media (max-width: 640px) {
+  .custom-form-box,
+  .custom-info-box {
+    border-radius: 0.5rem;
+  }
+}

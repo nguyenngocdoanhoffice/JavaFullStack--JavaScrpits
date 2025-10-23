@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                while (isNaN(width) || width <= 0) {
+                    width = parseFloat(prompt("Nhap lai chieu rong (> 0):"));
+                }
+                while (isNaN(height) || height <= 0) {
+                    height = parseFloat(prompt("Nhap lai chieu dai (> 0):"));
+                }
+                this.width = width;
+                this.height = height;
+            }
+
+            getArea() {
+                return this.width * this.height;
+            }
+
+            getPerimeter() {
+                return 2 * (this.width + this.height);
+            }
+        }
+
+        const widthInput = parseFloat(prompt("Nhap chieu rong:"));
+        const heightInput = parseFloat(prompt("Nhap chieu dai:"));
+        const rect = new Rectangle(widthInput, heightInput);
+
+        console.log(`Dien tich hinh chu nhat: ${rect.getArea()}`);
+        console.log(`Chu vi hinh chu nhat: ${rect.getPerimeter()}`);
+    </script>
+</body>
+
+</html>

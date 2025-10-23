@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class vehicle {
+            brand = "";
+            constructor(brand = "some brand") {
+                this.brand = brand;
+            }
+            move() {
+                console.log("The vehicle is moving");
+            }
+        }
+        class Car extends vehicle {
+            wheels = 4;
+            constructor(brand, wheels) {
+                super(brand);
+                this.wheels = wheels;
+            }
+        }
+        class electricCar extends Car {
+            battery = 100;
+            constructor(brand, wheels, battery) {
+                super(brand, wheels);
+                this.battery = battery;
+            }
+            charge() {
+                console.log("The electric car is charging");
+            }
+        }
+        let myElectricCar = new electricCar("Tesla", 4, 85);
+        console.log(`Brand: ${myElectricCar.brand}`);
+        console.log(`Wheels: ${myElectricCar.wheels}`);
+        console.log(`Battery: ${myElectricCar.battery} kWh`);
+        myElectricCar.move();
+        myElectricCar.charge();
+        let myCar = new Car("Toyota", 4);
+        console.log(`Brand: ${myCar.brand}`);
+        console.log(`Wheels: ${myCar.wheels}`);
+        myCar.move();
+        let myVehicle = new vehicle("Generic Vehicle");
+        console.log(`Brand: ${myVehicle.brand}`);
+        myVehicle.move();
+
+    </script>
+</body>
+
+</html>

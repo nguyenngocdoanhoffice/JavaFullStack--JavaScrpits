@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách bài viết</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../Bai3/style.css">
+</head>
+<body class="bg-gray-100 py-10 flex flex-col items-center">
+
+  <div class="bg-white shadow-md rounded-lg p-6 w-[600px]">
+    <h2 class="text-2xl font-bold text-center text-emerald-600 mb-6">Danh sách bài viết</h2>
+
+    <div class="flex gap-2 mb-4">
+      <input 
+        type="text" 
+        id="searchInput" 
+        class="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+        placeholder="Nhập tiêu đề để tìm kiếm..."
+      >
+      <button 
+        id="btnSearch"
+        class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded transition"
+      >
+        Tìm
+      </button>
+    </div>
+
+    <p id="loadingText" class="text-center text-gray-500">Đang tải...</p>
+
+    <ul id="postList" class="space-y-4 mt-4"></ul>
+  </div>
+
+  <script src="../Bai3/scrpit.js"></script>
+</body>
+</html>
