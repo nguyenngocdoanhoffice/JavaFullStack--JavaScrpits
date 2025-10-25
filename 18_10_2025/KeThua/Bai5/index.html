@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="info" class="info">1. </div>
+    <div id="info" class="info">2. </div>
+    <div id="info" class="info">3. </div>
+    <button id="show" onclick="showInfo()">Hien thi thong tin</button>
+
+    <script>
+        class User {
+            name = "";
+            email = "";
+            constructor(name, email) {
+                this.name = name;
+                this.email = email;
+            }
+            renderInfo() {
+                return `Name: ${this.name}, Email: ${this.email}`;
+            }
+        }
+        function showInfo() {
+            let user1 = new User("Doanh", "doanh@gmail.com");
+            // let a = document.getElementsByClassName("info");
+            // // a[0].innerHTML = user1.renderInfo();
+            // for (let i = 0; i < a.length; i++) {
+            //     a[i].innerHTML = user1.renderInfo();
+            // }
+            // let a = document.querySelector(".info");
+            // console.log(a);
+            // a.innerHTML = user1.renderInfo();
+            let a = document.querySelectorAll(".info");
+            console.log(a);
+            for (let i = 0; i < a.length; i++) {
+                a[i].innerHTML = user1.renderInfo();
+            }
+        }
+    </script>
+</body>
+
+</html>
