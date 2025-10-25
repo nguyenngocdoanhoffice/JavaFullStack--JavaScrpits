@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const pass = document.getElementById("password").value.trim();
 
   if (user === "admin" && pass === "123456") {
-    window.location.href = "../Bai2/index.html"; // chuyển sang qlsv.html
+    window.location.href = "../Bai2/index.html"; 
   } else {
     alert("Sai thông tin đăng nhập! (Gợi ý: admin / 123456)");
   }

@@ -10,7 +10,7 @@ async function fetchPosts() {
     loadingText.textContent = "Đang tải...";
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     const data = await res.json();
-    postsData = data.slice(0, 10); // chỉ lấy 10 bài đầu
+    postsData = data.slice(0, 10); 
     renderPosts(postsData);
   } catch (err) {
     loadingText.textContent = "Lỗi tải dữ liệu!";

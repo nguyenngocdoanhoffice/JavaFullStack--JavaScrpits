@@ -8,7 +8,6 @@ const tableSV = document.getElementById("tableSV").querySelector("tbody");
 let monHocs = [];
 let editRow = null;
 
-// Thêm môn học
 btnThemMon.addEventListener("click", () => {
   const mon = prompt("Nhập tên môn học:");
   if (mon) {
@@ -22,7 +21,6 @@ btnThemMon.addEventListener("click", () => {
   }
 });
 
-// Thêm lớp
 btnThemLop.addEventListener("click", () => {
   const lop = prompt("Nhập tên lớp:");
   if (lop) {
@@ -33,7 +31,6 @@ btnThemLop.addEventListener("click", () => {
   }
 });
 
-// Thêm hoặc cập nhật SV
 btnThemSV.addEventListener("click", () => {
   const ten = document.getElementById("tenSV").value.trim();
   const namSinh = document.getElementById("namSinh").value;
