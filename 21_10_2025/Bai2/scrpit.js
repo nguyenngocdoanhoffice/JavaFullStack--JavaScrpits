@@ -76,7 +76,6 @@ btnThemSV.addEventListener("click", () => {
   monHocContainer.querySelectorAll("input").forEach(i => i.checked = false);
 });
 
-// Sửa / Xóa
 tableSV.addEventListener("click", (e) => {
   if (e.target.classList.contains("btnXoa")) {
     e.target.closest("tr").remove();
